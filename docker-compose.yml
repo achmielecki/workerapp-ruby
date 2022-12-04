@@ -34,19 +34,19 @@ services:
     networks:
       - abd_network   
       
-  pgadmin4:
-    image: dpage/pgadmin4
-    container_name: pgadmin4
-    restart: on-failure   
-    environment:
-      PGADMIN_DEFAULT_EMAIL: "postgres@postgres.com"
-      PGADMIN_DEFAULT_PASSWORD: "postgres"
-    depends_on:
-      - db
-    networks:
-      - abd_network
-    ports:
-      - 8081:80
+#  pgadmin4:
+#    image: dpage/pgadmin4
+#    container_name: pgadmin4
+#    restart: on-failure
+#    environment:
+#      PGADMIN_DEFAULT_EMAIL: "postgres@postgres.com"
+#      PGADMIN_DEFAULT_PASSWORD: "postgres"
+#    depends_on:
+#      - db
+#    networks:
+#      - abd_network
+#    ports:
+#      - 8081:80
 
 networks:
   abd_network:
@@ -54,4 +54,4 @@ networks:
 
 volumes:
   postgres_volume:
-    external: true
+#    external: true

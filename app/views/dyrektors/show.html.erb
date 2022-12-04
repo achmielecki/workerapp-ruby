@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @dyrektor %>
+
+<div>
+  <%= link_to "Edit this dyrektor", edit_dyrektor_path(@dyrektor) %> |
+  <%= link_to "Back to dyrektors", dyrektors_path %>
+
+  <%= button_to "Destroy this dyrektor", @dyrektor, method: :delete %>
+</div>

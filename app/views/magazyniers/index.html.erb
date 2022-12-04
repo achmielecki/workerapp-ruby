@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Magazynierzy</h1>
+
+<div id="magazyniers">
+  <% @magazyniers.each do |magazynier| %>
+    <%= render magazynier %>
+    <p>
+      <%= link_to "Show this magazynier", magazynier %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New magazynier", new_magazynier_path %>

@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @magazynier %>
+
+<div>
+  <%= link_to "Edit this magazynier", edit_magazynier_path(@magazynier) %> |
+  <%= link_to "Back to magazyniers", magazyniers_path %>
+
+  <%= button_to "Destroy this magazynier", @magazynier, method: :delete %>
+</div>

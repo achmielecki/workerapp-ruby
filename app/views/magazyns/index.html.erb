@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Magazyny</h1>
+
+<div id="magazyns">
+  <% @magazyns.each do |magazyn| %>
+    <%= render magazyn %>
+    <p>
+      <%= link_to "Show this magazyn", magazyn %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New magazyn", new_magazyn_path %>

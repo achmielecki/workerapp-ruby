@@ -1,0 +1,37 @@
+<%= form_with(model: magazyn) do |form| %>
+  <% if magazyn.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(magazyn.errors.count, "error") %> prohibited this magazyn from being saved:</h2>
+
+      <ul>
+        <% magazyn.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :City, style: "display: block" %>
+    <%= form.text_field :City %>
+  </div>
+
+  <div>
+    <%= form.label :Street, style: "display: block" %>
+    <%= form.text_field :Street %>
+  </div>
+
+  <div>
+    <%= form.label :PostalCode, style: "display: block" %>
+    <%= form.text_field :PostalCode %>
+  </div>
+
+  <div>
+    <%= form.label :Country, style: "display: block" %>
+    <%= form.text_field :Country %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

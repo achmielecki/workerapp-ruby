@@ -1,0 +1,42 @@
+<%= form_with(model: magazynier) do |form| %>
+  <% if magazynier.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(magazynier.errors.count, "error") %> prohibited this magazynier from being saved:</h2>
+
+      <ul>
+        <% magazynier.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :Name, style: "display: block" %>
+    <%= form.text_field :Name %>
+  </div>
+
+  <div>
+    <%= form.label :Surname, style: "display: block" %>
+    <%= form.text_field :Surname %>
+  </div>
+
+  <div>
+    <%= form.label :Salary, style: "display: block" %>
+    <%= form.text_field :Salary %>
+  </div>
+
+  <div>
+    <%= form.label :Shift, style: "display: block" %>
+    <%= form.text_field :Shift %>
+  </div>
+
+  <div>
+    <%= form.label :magazyn_id, style: "display: block" %>
+    <%= form.text_field :magazyn_id %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
